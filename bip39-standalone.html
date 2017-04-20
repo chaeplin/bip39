@@ -17896,6 +17896,16 @@ bitcoin.networks.dash = {
   wif: 0xcc,
 };
 
+bitcoin.networks.tdash = {
+  bip32: {
+    public: 0x043587cf,
+    private: 0x04358394
+  },
+  pubKeyHash: 0x8c,
+  scriptHash: 0x13,
+  wif: 0xef,
+};
+
 bitcoin.networks.namecoin = {
   bip32: {
     public: 0x0488b21e,
@@ -42773,6 +42783,13 @@ window.Entropy = new (function() {
                 DOM.bip44coin.val(5);
             },
         },
+        {
+            name: "tDASH",
+            onSelect: function() {
+                network = bitcoin.networks.tdash;
+                DOM.bip44coin.val(1);
+            },
+        },        
         {
             name: "Ethereum",
             onSelect: function() {

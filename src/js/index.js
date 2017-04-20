@@ -1107,6 +1107,13 @@
             },
         },
         {
+            name: "tDASH",
+            onSelect: function() {
+                network = bitcoin.networks.tdash;
+                DOM.bip44coin.val(1);
+            },
+        },        
+        {
             name: "Ethereum",
             onSelect: function() {
                 network = bitcoin.networks.bitcoin;
